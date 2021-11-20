@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .clip-path {
+        clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%);
+    }
+    .clip-path-hexagon {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
