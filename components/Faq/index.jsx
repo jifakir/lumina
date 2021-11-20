@@ -14,7 +14,6 @@ const Faq = () => {
                     <Accordion />
                     <Accordion />
                     <Accordion />
-                    <Accordion />
                 </div>
             </div>
         </div>
