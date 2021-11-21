@@ -13,11 +13,11 @@ const Header = () => {
                 </div>
                 <div className="">
                     {
-                        menuItems.map((v, idx) => <a className="text-white font-primary px-3 cursor-pointer hover:text-blue" key={idx}>{v}</a>)
+                        menuItems.map((v, idx) => <a className="text-white transition duration-500 ease-in-out font-primary px-3 cursor-pointer hover:text-blue hover:font-semibold" key={idx}>{v}</a>)
                     }
                 </div>
                 <div className="">
-                    <a href="" className="px-5 py-4 border border-opacity-50 rounded-full text-white text-sm hover:bg-blue">ICON? APPLY FOR IDO</a>
+                    <a href="" className="px-5 transition duration-500 ease-in-out py-4 border border-opacity-50 rounded-full text-white text-sm hover:bg-blue">ICON? APPLY FOR IDO</a>
                 </div>
             </div>
         </div>

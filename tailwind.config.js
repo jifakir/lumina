@@ -20,6 +20,12 @@ module.exports = {
         'primary': ['Inria Sans'],
         'secondary': ['Monument Extended'],
       },
+      fontSize: {
+        '40px': '2.5rem',
+        '60px': '3.5rem',
+        '80px': '5rem'
+
+      },
       spacing: {
         '18': '4.688rem',
         '110': '28rem'
