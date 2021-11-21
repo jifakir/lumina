@@ -1,16 +1,18 @@
+import { useEffect, useRef, useState } from "react";
 import ExpCard from "./ExpCard";
 import Image from 'next/image';
 import experience from '../../assets/experience.png';
 import curexp from '../../assets/curexp.svg';
-
-
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 // Icons
 import logo from '../../assets/logo.svg';
 import mint from '../../assets/Mint.svg';
 import nft from '../../assets/nft.svg';
 import metaverse from '../../assets/metaverse.svg';
 import ticketing from '../../assets/ticketing.svg';
-import { useState } from "react";
+
 
 
 const expItems = [
@@ -44,6 +46,38 @@ const Experience = () => {
 
     const [active, setActive] = useState('fans');
     
+    const fansRef = useRef();
+    const iconsRef = useRef();
+    const brinRef = useRef();
+    const descRef = useRef();
+    const expRef = useRef();
+    const logoRef = useRef();
+    const logorightRef = useRef();
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            duration: 1, 
+            scrollTrigger:{
+                trigger: brinRef.current,
+                start: "center center",
+            }
+        });
+        tl.from(brinRef.current, {y: 10, opacity: 0});
+        tl.from(iconsRef.current, {x: '-150%', opacity: 0});
+        tl.from(fansRef.current, {x: '-130%', opacity: 0});
+        tl.from(descRef.current, {y: 10, opacity: 0});
+        
+    },[]);
+
+    // Animating bottom section
+    useEffect(() => {
+        gsap.timeline({duration: 1, scrollTrigger:{
+            trigger: expRef.current,
+        }})
+        .from(expRef.current, {y: -20, opacity: 0})
+        .from(logoRef.current, {y: 20, opacity: 0}, "<")
+        .from(logorightRef.current, {x: 15, opacity: 0})
+    },[])
 
     return (
         <div className="container mx-auto bg-secondary">
@@ -51,20 +85,20 @@ const Experience = () => {
                 <div className="absolute right-5 top-5">
                     <Image className="w-full" src={curexp} alt="Back Shape" />
                 </div>
-                <p className="uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
+                <p ref={brinRef} className="uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
                     bringing a new experience to fan-icon experience
                 </p>
                 <ul className="flex text-5xl text-white my-10 font-bold select-none">
-                    <li onClick={() => setActive('fans')} className="relative cursor-pointer mr-9">
+                    <li ref={fansRef} onClick={() => setActive('fans')} className="relative cursor-pointer mr-9">
                         <h1 className={`text-white ${active !== 'fans' ? 'text-opacity-20' : ''}`}>Fans</h1>
-                        <span className={`absolute -bottom-2 min-w-full h-1 bg-gradient-to-r from-blue to-green ${active === 'fans' ? 'inline-block' : 'hidden'}`}></span>
+                        <span className={`absolute -bottom-2 w-0 h-1 bg-gradient-to-r from-blue to-lightgreen ${active === 'fans' ? 'inline-block min-w-full' : 'hidden'}`}></span>
                     </li>
-                    <li onClick={() => setActive('icons')} className="relative  cursor-pointer">
+                    <li ref={iconsRef} onClick={() => setActive('icons')} className="relative  cursor-pointer">
                         <h1 className={`text-white ${active !== 'icons' ? 'text-opacity-20' : 'text-opacity-100'}`}>Icons</h1>
-                        <span className={`absolute -bottom-2 min-w-full h-1 bg-gradient-to-r from-blue to-green ${active === 'icons' ? 'inline-block' : 'hidden'}`}></span>
+                        <span className={`absolute -bottom-2 min-w-full h-1 bg-gradient-to-r from-blue to-lightgreen ${active === 'icons' ? 'inline-block' : 'hidden'}`}></span>
                     </li>
                 </ul>
-                <p className="text-white font-normal text-opacity-70 text-xl">
+                <p ref={descRef} className="text-white font-normal text-opacity-70 text-xl">
                     Our revolutionary social app fosters unparalleled experience for the true fans. 
                     They can have robust experiences with their icons in ways they could not do before now. 
                     They are no longer just transactional parties. They are more involved than ever before. 
@@ -74,15 +108,15 @@ const Experience = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-10 mt-14">
                     {
-                        expItems.map((item, idx) => <ExpCard key={idx} items={item} />)
+                        expItems.map((item, idx) => <ExpCard key={idx} itemIdx={idx} items={item} />)
                     }
                 </div>
                 <div className="relative w-full flex text-white z-10 mt-36">
                     <div className="w-1/3">
-                        <h1 className="text-5xl mb-2">Experience</h1>
-                        <Image className="w-full pt-2 pl-1" src={logo} alt="Logo" />
+                        <h1 ref={expRef} className="text-5xl mb-2 -ml-1">Experience</h1>
+                        <div ref={logoRef} className=""><Image className="w-full pt-2 pl-1" src={logo} alt="Logo" /></div>
                     </div>
-                    <div className="text-white w-2/3 text-xl font-normal text-opacity-70">
+                    <div ref={logorightRef} className="text-white w-2/3 text-xl font-normal text-opacity-70">
                         <p className="">
                             The Lumina Token LUMIN is a store of great value and is a passport to a world of unparalleled experience for any icon listing their IFTs on the platform and their fans. For the holders of the IFTs, as it increases in value, it becomes very rewarding along with the utility derived from its use on the app as an exchange for their icon IFTs. 
                         </p>
@@ -92,7 +126,7 @@ const Experience = () => {
                     </div>
                 </div>
                 <div className="absolute max-w-full left-0 bottom-0 z-0">
-                    <Image className="max-w-full min-h-full" src={experience} alt="Experience"  />
+                    <Image width={1600} height={500} layout="responsive" src={experience} alt="Experience"  />
                 </div>
             </div>
         </div>

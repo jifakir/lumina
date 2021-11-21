@@ -10,13 +10,18 @@ import gsap from 'gsap';
 import { useEffect } from 'react';
 
 const Hero = () => {
+    
+    const titleRef = React.useRef();
+    const subtitRef = React.useRef();
     const telRef = React.useRef();
     const instaRef = React.useRef();
     const twitRef = React.useRef();
     const cardRef = React.useRef();
 
     useEffect(() => {
-        gsap.timeline({duration: 2, opacity: 0,})
+        gsap.timeline({duration: 2, opacity: 0})
+            .from(titleRef.current, {x: 50, duration: 1})
+            .from(subtitRef.current, {y: 5, opacity: 0})
             .from(instaRef.current, {x: '-30%', opacity: 0, rotate: 180})
             .from(twitRef.current, {x: '-30%', opacity: 0, rotate: 180})
             .from(telRef.current, {x: '-30%', opacity: 0, rotate: 180})
@@ -31,7 +36,7 @@ const Hero = () => {
                             icon fan tokens
                         </p>
                     </div>
-                    <div className="my-9 text-white">
+                    <div ref={titleRef} className="my-9 text-white">
                         <h1 className="uppercase text-40px leading-normal font-secondary">
                             Launchpad for<br/> Entertainment<br/> and Sports  
                             <span className="relative">
@@ -42,7 +47,7 @@ const Hero = () => {
                             </span>
                         </h1>
                     </div>
-                    <div className="">
+                    <div ref={subtitRef} className="">
                         <p className="pb-10 text-white text-xl font-light">
                             The world first platform that allows you to go beyond 
                             loving your favorite icons. Trade them, mint them, build

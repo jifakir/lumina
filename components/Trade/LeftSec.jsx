@@ -1,8 +1,28 @@
-
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 const LeftSec = () => {
 
+    const headRef = useRef();
+    const strikeRef = useRef();
+    const capitRef = useRef();
+    const buyRef = useRef();
+
+    useEffect(()=> {
+        gsap.timeline({ 
+            duration: 1,
+            scrollTrigger: {
+                trigger: headRef.current
+            }
+        })
+        .from(strikeRef.current, {y: -20, opacity: 0})
+        .from(headRef.current, {x: -20, opacity: 0})
+        .from(capitRef.current, {y: 10, opacity: 0})
+        .from(buyRef.current, {y: 10, opacity: 0}, )
+    },[]);
     return (
                 <div className="w-1/2">
                     <div className="">
@@ -19,18 +39,18 @@ const LeftSec = () => {
                             popular shows
                         </span>
                     </div>
-                    <h2 className="text-red text-4xl font-light mt-14">
+                    <h2 ref={strikeRef} className="text-red text-40px font-light mt-14">
                         <s>Don’t just love them.</s>
                     </h2>
-                    <h1 className="text-5xl text-white pt-2">
+                    <h1 ref={headRef} className="text-80px font-bold text-white pt-2 leading-none">
                         Trade Them.<br/>
                         Mint Them.<br/>
                         Build Wealth.
                     </h1>
-                    <p className="text-white text-opacity-70 mt-10">
+                    <p ref={capitRef} className="text-white text-opacity-70 mt-10">
                         Capitalize on trends and trade with confidence through our <br/>expansive Icon Fans Token listings.
                     </p>
-                    <p className="text-xl text-blue mt-2">
+                    <p ref={buyRef} className="text-xl text-darkblue mt-3">
                         Buy, sell, and trade over 500 Icon Fan Tokens
                     </p>
                 </div>

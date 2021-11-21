@@ -1,13 +1,47 @@
 import * as React from 'react';
 import Image from 'next/image';
 import line from '../../assets/line.svg';
+import TokenCard from './TokenCard';
+import gsap from 'gsap';
 
+//* Data for tile
+const tileData = [
+    {
+        title: 'Public Sale Token Prize',
+        sub: 'TBA',
+        bg: 'bg-pink1'
+    },
+    {
+        title: 'Maximum Token Supply',
+        sub: 'TBA $LUMIN',
+        bg: 'bg-skyblue',
+    },
+    {
+        title: 'Market capitalization at listing',
+        sub: 'TBA',
+        bg: 'bg-red'
+    },
+    {
+        title: 'Total circulating supply at listing',
+        sub: 'TBA $LUMIN',
+        bg: 'bg-lightcyan'
+    },
+]
+
+// ! Component start
 
 const Token = () => {
+    
+    const tokenRef = React.useRef();
+
+    //* Animating tile*********
+    React.useEffect(()=> {
+        gsap.from(tokenRef.current , {duration: 1, y: 15, opacity: 0, scrollTrigger: {trigger: tokenRef.current}});
+    })
     return (
         <div className="bg-secondary">
             <div className="container mx-auto pt-24 pb-24">
-                <h1 className="text-white text-center font-semibold text-5xl pb-18">
+                <h1 className="text-white text-center font-bold text-56px pb-18">
                     IDO, Token, Price, and<br/>
                     Vesting Schedules
                 </h1>
@@ -15,24 +49,13 @@ const Token = () => {
                     
                     <div className="w-full grid grid-cols-2 gap-10">
                         {
-                            Array(4).fill('').map((v, idx) => (
-                                <div key={idx} className="p-11 bg-lightpeach flex flex-col justify-between">
-                                    <div className="">
-                                        <h1 className="text-4xl font-semibold">
-                                            Public Sale<br/>
-                                            Token Prize
-                                        </h1>
-                                    </div>
-                                    <div className="flex justify-between items-baseline">
-                                        <h6 className="">TBA</h6>
-                                        <Image src={line} alt="Line" />
-                                    </div>
-                                </div>
+                            tileData.map((v, idx) => (
+                                <TokenCard key={idx} data={v} index={idx} />
                             ))
                         }
                     </div>
-                    <div className="p-11 mt-10 w-full bg-blue">
-                        <h1 className="text-4xl font-semibold pb-5">
+                    <div ref={tokenRef} className="p-11 mt-10 w-full bg-purple1">
+                        <h1 className="text-40px font-bold pb-5">
                             Tokenomics
                         </h1>
                         <div className="flex justify-between">

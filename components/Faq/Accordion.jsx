@@ -1,16 +1,29 @@
+import gsap from 'gsap';
 import * as React from 'react';
-
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const Accordion = () => {
     const [active, setActive] = React.useState(false);
+    const accordRef = React.useRef();
+    
+    const openHanlder = () => {
+        if(active){
+            gsap.to(accordRef.current, {height: 30, duration: 1});
+            setActive(false);
+        }else{
+            gsap.to(accordRef.current, {height: 'auto', duration: 1});
+            setActive(true);
+        }
+    };
     return (
-        <div className={`w-3/4 mx-auto text-white py-2 ${active ? 'bg-secondary px-12' : 'border-b border-gray-600'}`}>
-            <div className="font-medium">
+        <div className={`w-3/4 mx-auto text-white py-2 mb-2 px-5 ${active ? 'bg-secondary' : 'border-b border-white border-opacity-10'}`}>
+            <div ref={accordRef} className="font-medium overflow-hidden" style={{height: '30px'}}>
                 <div className="flex justify-between items-center text-2xl">
-                    <h1 className="text-white">What is Lumina?</h1>
-                    <div className="text-2xl cursor-pointer select-none hover:text-blue" onClick={()=> setActive(!active)}>{active ? '-' : '+'}</div>
+                    <h1 className="text-white font-bold">What is Lumina?</h1>
+                    <div className="cursor-pointer select-none hover:text-blue" onClick={openHanlder}>{active ? '-' : '+'}</div>
                 </div>
-                <p className={!active ? 'hidden' : ''}>
+                <p className="text-base mt-2">
                     LUMINA (LUMI) is a digital currency for entertainment platforms, and adoptable across 
                     a wide range of industries. It aims to foster 
                     a blockchain ecosystem built for entertainment icons, including Music, TV and Sports;

@@ -9,14 +9,14 @@ const Footer = () => {
         <div className="bg-secondary">
             <div className="container px-20 mx-auto">
                 <div className="py-28 flex justify-between border-b border-gray-800">
-                    <div className="text-white">
-                        <h6 className="pb-8 text-opacity-70">Powered by:</h6>
+                    <div className="">
+                        <h6 className="pb-8 text-white text-opacity-70">Powered by:</h6>
                         <div className="">
                             <Image src={binance} alt="Binance Logo" />
                         </div>
                     </div>
                     <div className="text-white">
-                        <h6 className="pb-8">Join Social</h6>
+                        <h6 className="pb-8 text-white text-opacity-70">Join Social</h6>
                         <div className="flex text-white">
                             <div className="w-18 h-18 rounded-full p-2 mr-3 bg-cyan text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
                                 <FaTelegramPlane />
@@ -35,7 +35,7 @@ const Footer = () => {
                         <Image src={logo} alt="Logo" />
                     </div>
                     <div className="">
-                        <p className="text-gray-500">
+                        <p className="text-white text-opacity-50">
                             Copyright © 2021 Lumina. All Rights Reserved.
                         </p>
                     </div>
