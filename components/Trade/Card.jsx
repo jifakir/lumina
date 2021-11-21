@@ -8,7 +8,7 @@ const Card = ({data, index}) => {
                                 <div className="flex">
                                     <div className="w-10 h-10 mr-4 rounded-full flex justify-center items-center overflow-hidden bg-lightpeach border-4 border-red">
                                         <div className="w-8 h-8 rounded-full transform -translate-x-1 -translate-y-1 overflow-hidden flex justify-center items-center">
-                                            <Image width={100} height={100} layout="fill" src={profile} alt="Profile Pic" />
+                                            <Image layout="fill" src={profile} alt="Profile Pic" />
                                         </div>
                                     </div>
                                     <div className="">
