@@ -50,6 +50,7 @@ const Experience = () => {
     const iconsRef = useRef();
     const brinRef = useRef();
     const descRef = useRef();
+    const descRef2 = useRef();
     const expRef = useRef();
     const logoRef = useRef();
     const logorightRef = useRef();
@@ -59,15 +60,28 @@ const Experience = () => {
             duration: 1, 
             scrollTrigger:{
                 trigger: brinRef.current,
-                start: "center center",
             }
         });
         tl.from(brinRef.current, {y: 10, opacity: 0});
         tl.from(iconsRef.current, {x: '-150%', opacity: 0});
         tl.from(fansRef.current, {x: '-130%', opacity: 0});
-        tl.from(descRef.current, {y: 10, opacity: 0});
         
     },[]);
+    // Animating descripton..******
+    useEffect(() => {
+        
+        if(active==='fans'){
+            gsap.from(descRef.current, {y: 10, opacity: 0, duration: 0.5, 
+                scrollTrigger:{
+                    trigger: descRef.current,
+                }});
+        }else {
+            gsap.from(descRef2.current, {y: 10, opacity: 0, duration: 0.5, 
+                scrollTrigger:{
+                    trigger: descRef2.current,
+                }});
+        }
+    },[active]);
 
     // Animating bottom section
     useEffect(() => {
@@ -98,13 +112,21 @@ const Experience = () => {
                         <span className={`absolute -bottom-2 min-w-full h-1 bg-gradient-to-r from-blue to-lightgreen ${active === 'icons' ? 'inline-block' : 'hidden'}`}></span>
                     </li>
                 </ul>
-                <p ref={descRef} className="text-white font-normal text-opacity-70 text-xl">
-                    Our revolutionary social app fosters unparalleled experience for the true fans. 
+                <p ref={descRef} className={`text-white font-normal h-32 text-opacity-70 text-xl ${active === 'fans' ? 'block': 'hidden'}`}>
+                    Our Fans revolutionary social app fosters unparalleled experience for the true fans. 
                     They can have robust experiences with their icons in ways they could not do before now. 
                     They are no longer just transactional parties. They are more involved than ever before. 
                     The in-app experience allows fans to have a say in icon matters, to claim great giveaways, 
                     play games, enter into draws, audition for future icon projects and view games from VIP stands. 
                     They can earn free tokens on the app through solving puzzles by set by their loved icons.
+                </p>
+                <p ref={descRef2} className={`text-white font-normal h-32 text-opacity-70 text-xl ${active === 'icons' ? 'block': 'hidden'}`}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book.    
                 </p>
                 <div className="grid grid-cols-2 gap-10 mt-14">
                     {
@@ -112,21 +134,21 @@ const Experience = () => {
                     }
                 </div>
                 <div className="relative w-full flex text-white z-10 mt-36">
-                    <div className="w-1/3">
-                        <h1 ref={expRef} className="text-5xl mb-2 -ml-1">Experience</h1>
-                        <div ref={logoRef} className=""><Image className="w-full pt-2 pl-1" src={logo} alt="Logo" /></div>
+                    <div className="w-1/3 ">
+                        <h1 ref={expRef} className="text-56px -ml-1 -mb-8 pt-0 mt-0 font-light">Experience</h1>
+                        <div ref={logoRef} className=" w-80 h-28"><Image width={250} height={100} layout="intrinsic" src={logo} alt="Logo" /></div>
                     </div>
-                    <div ref={logorightRef} className="text-white w-2/3 text-xl font-normal text-opacity-70">
+                    <div ref={logorightRef} className="text-white w-2/3 text-xl font-normal text-opacity-60">
                         <p className="">
                             The Lumina Token LUMIN is a store of great value and is a passport to a world of unparalleled experience for any icon listing their IFTs on the platform and their fans. For the holders of the IFTs, as it increases in value, it becomes very rewarding along with the utility derived from its use on the app as an exchange for their icon IFTs. 
                         </p>
-                        <p className="pt-3">
+                        <p className="pt-5">
                         he fans are no longer on the sidelines as spectators and just transactional parties who are only sold to. They are now involved and have their say in matters with their icons. They now influence things in real time. They are also rewarded based on their activities in-app.
                         </p>
                     </div>
                 </div>
-                <div className="absolute max-w-full left-0 bottom-0 z-0">
-                    <Image width={1600} height={500} layout="responsive" src={experience} alt="Experience"  />
+                <div className="absolute max-w-full left-0 bottom-0 z-0 -mb-2">
+                    <Image width={1600} height={500} layout="intrinsic" sizes="20px" src={experience} alt="Experience"  />
                 </div>
             </div>
         </div>

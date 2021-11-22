@@ -7,7 +7,7 @@ const Trade = () => {
 
     return (
         <div className="container mt-24 pb-16 mx-auto relative">
-            <div className="absolute right-0 bottom-0">
+            <div className="absolute right-0 bottom-0 -mb-1">
                 <Image src={wave} alt="Wave" />
             </div>
             <div className="flex pb-28">

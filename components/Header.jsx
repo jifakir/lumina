@@ -17,7 +17,7 @@ const Header = () => {
                     }
                 </div>
                 <div className="">
-                    <a href="" className="px-5 transition duration-500 ease-in-out py-4 border border-opacity-50 rounded-full text-white text-sm hover:bg-blue">ICON? APPLY FOR IDO</a>
+                    <a href="" className="px-7 transition duration-500 ease-in-out py-4 border border-opacity-50 rounded-full text-white text-sm hover:bg-blue">ICON? APPLY FOR IDO</a>
                 </div>
             </div>
         </div>

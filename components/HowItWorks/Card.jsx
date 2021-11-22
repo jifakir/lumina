@@ -38,7 +38,7 @@ const Card = ({index, data}) => {
         <div ref={cardRef} className={`p-10 ${index === 0 ? 'bg-thinblue':'bg-white'}`}>
             <div className="flex justify-between items-center">
                 <h1 ref={headingRef} className="uppercase text-40px text-gray-700 text-opacity-50 font-light">FOR <span className="font-bold text-black1">{title}</span></h1>
-                <button className={`uppercase border px-5 py-2 text-sm font-bold ${index !== 0 ? ' text-black2 border-black2 hover:bg-blue3 bg-opacity-50' : ' text-blue3 border-blue3 hover:bg-white'}`}>{btnTitle}</button>
+                <button className={`transition duration-200 ease-in-out uppercase border px-5 py-2 text-sm font-bold ${index !== 0 ? ' text-black2 border-black2 hover:bg-gray-100 bg-opacity-50' : ' text-blue3 border-blue3 hover:bg-white'}`}>{btnTitle}</button>
             </div>
             <ul className="">
                 {

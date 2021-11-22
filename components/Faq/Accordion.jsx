@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import * as React from 'react';
+import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,9 +22,9 @@ const Accordion = () => {
             <div ref={accordRef} className="font-medium overflow-hidden" style={{height: '30px'}}>
                 <div className="flex justify-between items-center text-2xl">
                     <h1 className="text-white font-bold">What is Lumina?</h1>
-                    <div className="cursor-pointer select-none hover:text-blue" onClick={openHanlder}>{active ? '-' : '+'}</div>
+                    <div className={`cursor-pointer select-none hover:text-blue ${active ? 'text-blue' : ''}`} onClick={openHanlder}>{active ?  <AiOutlineMinus /> : <AiOutlinePlus />}</div>
                 </div>
-                <p className="text-base mt-2">
+                <p className="text-base mt-2 pb-10">
                     LUMINA (LUMI) is a digital currency for entertainment platforms, and adoptable across 
                     a wide range of industries. It aims to foster 
                     a blockchain ecosystem built for entertainment icons, including Music, TV and Sports;
