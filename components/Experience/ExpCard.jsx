@@ -43,10 +43,10 @@ const ExpCard = ({items, itemIdx}) => {
     return (
         <div ref={nodeRef} className={`${bg_color} px-7 py-10`}>
             <div className="flex justify-between items-center">
-                <div ref={iconRef} ><Image  src={icon} alt="Stake" /></div>
-                <div ref={lineRef} ><Image src={line} alt="Line" /></div>
+                <div ref={iconRef} ><Image width={70} height={70}  src={icon} alt="Stake" /></div>
+                <div ref={lineRef} ><Image width={150} height={70} src={line} alt="Line" /></div>
             </div>
-            <div ref={titleRef} className="flex justify-between pt-20 text-4xl text-white">
+            <div ref={titleRef} className="flex justify-between pt-5 md:pt-20 text-4xl text-white">
                 <h1 className="">{title}</h1>
                 <AiOutlinePlus />
             </div>

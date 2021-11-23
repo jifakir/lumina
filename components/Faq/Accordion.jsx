@@ -18,9 +18,9 @@ const Accordion = () => {
         }
     };
     return (
-        <div className={`w-3/4 mx-auto text-white py-2 mb-2 px-5 ${active ? 'bg-secondary' : 'border-b border-white border-opacity-10'}`}>
+        <div className={`w-full md:w-3/4 mx-auto text-white py-2 mb-2 px-5 ${active ? 'bg-secondary' : 'border-b border-white border-opacity-10'}`}>
             <div ref={accordRef} className="font-medium overflow-hidden" style={{height: '30px'}}>
-                <div className="flex justify-between items-center text-2xl">
+                <div className="flex justify-between items-center md:text-2xl">
                     <h1 className="text-white font-bold">What is Lumina?</h1>
                     <div className={`cursor-pointer select-none hover:text-blue ${active ? 'text-blue' : ''}`} onClick={openHanlder}>{active ?  <AiOutlineMinus /> : <AiOutlinePlus />}</div>
                 </div>

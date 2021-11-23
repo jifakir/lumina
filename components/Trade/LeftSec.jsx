@@ -24,33 +24,33 @@ const LeftSec = () => {
         .from(buyRef.current, {y: 10, opacity: 0}, )
     },[]);
     return (
-                <div className="w-1/2">
+                <div className="w-full md:w-1/2">
                     <div className="">
-                        <span className="mr-3 uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
+                        <span className="mr-3 uppercase text-sm md:text-base text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
                             music
                         </span>
-                        <span className="mr-3 uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
+                        <span className="mr-3 uppercase text-sm md:text-base text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
                             sports
                         </span>
-                        <span className="mr-3 uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
+                        <span className="mr-3 uppercase text-sm md:text-base text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
                             fasions
                         </span><br/>
-                        <span className="mt-5 uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
+                        <span className="mt-5 uppercase text-sm md:text-base text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
                             popular shows
                         </span>
                     </div>
-                    <h2 ref={strikeRef} className="text-red text-40px font-light mt-14">
+                    <h2 ref={strikeRef} className="text-red text-2xl md:text-40px font-light mt-8 md:mt-14">
                         <s>Don’t just love them.</s>
                     </h2>
-                    <h1 ref={headRef} className="text-80px font-bold text-white pt-2 leading-none">
+                    <h1 ref={headRef} className="text-5xl md:text-80px font-bold text-white pt-2 leading-none">
                         Trade Them.<br/>
                         Mint Them.<br/>
                         Build Wealth.
                     </h1>
-                    <p ref={capitRef} className="text-white text-opacity-70 mt-10">
-                        Capitalize on trends and trade with confidence through our <br/>expansive Icon Fans Token listings.
+                    <p ref={capitRef} className="text-white text-sm md:text-xs text-opacity-70 mt-3 md:mt-10">
+                        Capitalize on trends and trade with confidence through our expansive Icon Fans Token listings.
                     </p>
-                    <p ref={buyRef} className="text-xl text-darkblue mt-3">
+                    <p ref={buyRef} className="text-sm md:text-xl text-darkblue mt-3">
                         Buy, sell, and trade over 500 Icon Fan Tokens
                     </p>
                 </div>

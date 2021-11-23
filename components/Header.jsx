@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '../assets/logo.svg';
+import logo1 from '../assets/logo1.svg';
 
 const Header = () => {
     
@@ -7,9 +7,9 @@ const Header = () => {
 
     return (
         <div className="container mx-auto">
-            <div className="flex justify-between items-center py-10 pl-10">
+            <div className="flex justify-between items-center py-5 pl-10">
                 <div className="">
-                    <Image src={logo} alt="logo" />
+                    <Image width={150} height={50} src={logo1} alt="logo" />
                 </div>
                 <div className="">
                     {

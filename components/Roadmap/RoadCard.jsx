@@ -19,16 +19,16 @@ const RoadCard = ({index}) => {
         })
     },[]);
     return (
-                 <div ref={wrapRef} className="w-full relative">
-                    <div className={`w-full bg-secondary py-5 pl-6 pr-8 transform -translate-y-1/2 ${shiftRight ? 'translate-x-90' : '-translate-x-10'}`}>
-                        <div className={`absolute top-1/2 transform -translate-y-1/2 w-6 h-6 bg-indigo-800 rounded-full bg-opacity-50 flex justify-center items-center ${shiftRight ? '-left-13' : '-right-13'}`}>
+                 <div ref={wrapRef} className="w-full relative mt-5 md:mt-0">
+                    <div className={`w-72 md:w-full bg-secondary py-5 pl-6 pr-8 transform -translate-y-1/2 translate-x-8 ${shiftRight ? 'md:translate-x-90' : 'md:-translate-x-10'}`}>
+                        <div className={`absolute top-1/2 transform -translate-y-1/2 w-6 h-6 bg-indigo-800 rounded-full bg-opacity-50 flex justify-center items-center ${shiftRight ? '-left-11 md:-left-13' : ' md:-right-13'}`}>
                             <div className="w-4 h-4 bg-indigo-500 rounded-full bg-opacity-80 flex justify-center items-center">
                                 <div className="w-2 h-2 bg-white rounded-full">
                                 </div>
                             </div>
                         </div>
-                        <h2 className={`text-2xl text-white font-bold ${shiftRight ? 'text-left' : 'text-right'}`}>Presale</h2>
-                        <h4 className={`text-blue4 text-sm font-bold mt-3 ${shiftRight ? 'text-left' : 'text-right'}`}>Q4, 2021</h4>
+                        <h2 className={`text-2xl text-white font-bold ${shiftRight ? 'md:text-left' : 'md:text-right'}`}>Presale</h2>
+                        <h4 className={`text-blue4 text-sm font-bold mt-3 ${shiftRight ? 'md:text-left' : 'md:text-right'}`}>Q4, 2021</h4>
                         <div className="mt-8 text-sm">
                             <div className="flex justify-between">
                                 <h4 className="text-blue">Private Sales</h4>

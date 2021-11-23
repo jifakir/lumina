@@ -65,16 +65,16 @@ const BottomSec = () => {
     },[]);
 
     return (
-        <div ref={bottomRef} className="w-full mt-10 py-20 px-28 text-black1" style={{background: '#FFF7ED'}}>
-            <h1 className="font-bold text-56px leading-tight">
+        <div ref={bottomRef} className="w-full mt-10 py-10 md:py-20 px-5 md:px-28 text-black1" style={{background: '#FFF7ED'}}>
+            <h1 className="font-bold text-3xl md:text-56px leading-tight">
                 Icon-Fan Engagement<br/>
-                Tokenized. Re-imagined.
+                <span className="text-2xl md:text-56px">Tokenized. Re-imagined.</span>
             </h1>
-            <ul className="mt-12 flex">
+            <ul className="mt-5 md:mt-12 flex flex-wrap">
                 {
                     ['The Power of IFT', 'Why Lumina', 'Use Cases', 'Ecosystem', 'Lumina App'].map((v, idx) => (
                         <>
-                            <li key={idx} ref={ref => triRef.current[idx] = ref} onClick={() => setActive(idx)} className={`text-sm transition duration-1000 ease-in-out font-bold mr-8 px-3 py-2 rounded-full cursor-pointer ${active === idx ? 'bg-black text-white': 'text-gray-700'}`}>
+                            <li key={idx} ref={ref => triRef.current[idx] = ref} onClick={() => setActive(idx)} className={`text-xs md:text-sm transition duration-1000 ease-in-out font-bold mr-3 md:mr-8 px-3 py-2 rounded-full cursor-pointer ${active === idx ? 'bg-black text-white': 'text-gray-700'}`}>
                                 {v}
                             </li>
                         </>

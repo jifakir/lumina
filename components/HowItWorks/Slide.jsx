@@ -34,8 +34,8 @@ const Slide = ({active, data}) => {
 
     return (
       <div className={active ? 'block' : 'hidden'}>
-                <div className="flex mt-16">
-                    <div className="w-2/3 pr-20 text-black1">
+                <div className="flex flex-col-reverse md:flex-row mt-16">
+                    <div className="w-full md:w-2/3 md:pr-20 text-black1">
                         <p ref={firstRef} className="">
                             { title + ' ' + description1}
                         </p>
@@ -43,7 +43,7 @@ const Slide = ({active, data}) => {
                             {description2}
                         </p>
                     </div>
-                    <div ref={uiRef} className="w-1/3">
+                    <div ref={uiRef} className="w-full md:w-1/3">
                         <Image src={mobile} alt="Mobile" />
                     </div>
                 </div>
@@ -51,8 +51,8 @@ const Slide = ({active, data}) => {
                     {
                         ['In-App Activation', 'Exchange', 'Rewareds', 'Free Concerts','In-App Activation', 'Exchange', 'Rewareds', 'Free Concerts',].map((v, idx) => (
                             <>
-                                <li  key={idx} className="flex items-center w-1/4 mt-3">
-                                    <span className="pr-3">
+                                <li  key={idx} className="flex items-center w-1/2 md:w-1/4 mt-5 md:mt-3 text-xs md:text-base">
+                                    <span className="pr-1 md:pr-3">
                                         <FaCheckCircle />
                                     </span>
                                     <p className="text-black1">{v}</p>

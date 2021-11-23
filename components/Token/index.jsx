@@ -41,13 +41,13 @@ const Token = () => {
     return (
         <div className="bg-secondary">
             <div className="container mx-auto pt-24 pb-24">
-                <h1 className="text-white text-center font-bold text-56px pb-18">
+                <h1 className="text-white text-center font-bold text-3xl md:text-56px leading-tight pb-18">
                     IDO, Token, Price, and<br/>
                     Vesting Schedules
                 </h1>
-                <div className="px-44 text-white flex flex-wrap">
+                <div className="px-3 md:px-44 text-white flex flex-wrap">
                     
-                    <div className="w-full grid grid-cols-2 gap-10">
+                    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
                         {
                             tileData.map((v, idx) => (
                                 <TokenCard key={idx} data={v} index={idx} />
@@ -55,11 +55,11 @@ const Token = () => {
                         }
                     </div>
                     <div ref={tokenRef} className="p-11 mt-10 w-full bg-purple1">
-                        <h1 className="text-40px font-bold pb-5">
+                        <h1 className="text-3xl md:text-40px font-bold pb-5">
                             Tokenomics
                         </h1>
-                        <div className="flex justify-between">
-                            <ul className="w-3/4 grid grid-cols-3 gap-3">
+                        <div className="md:flex flex-col md:flex-row justify-between">
+                            <ul className="w-full md:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-3">
                                 {
                                     Array(9).fill('').map((v, idx) => (
                                         <li key={idx} className="flex justify-between">
@@ -69,7 +69,7 @@ const Token = () => {
                                     ))
                                 }
                             </ul>
-                            <div className="relative w-1/4 min-h-full flex justify-end items-end">
+                            <div className="relative w-full md:w-1/4 min-h-full md:flex justify-end items-end mt-10 md:mt-0">
                                 <Image className="" src={line} alt="Line" />
                             </div>
                         </div>

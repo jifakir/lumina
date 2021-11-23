@@ -29,44 +29,44 @@ const Hero = () => {
     });
     return (
         <div className="container mx-auto">
-            <div className="md:flex py-20 pl-10">
-                <div className="w-1/2">
+            <div className="flex flex-col-reverse md:flex-row md:py-20 md:pl-10 px-3">
+                <div className="w-full md:w-1/2">
                     <div className="">
-                        <p className="uppercase tracking-widest font-semibold text-lightpeach border border-dashed border-lightpeach px-2 py-1 inline-block">
+                        <p className="uppercase text-xs md:text-base tracking-widest font-semibold text-lightpeach border border-dashed border-lightpeach px-2 py-1 inline-block">
                             icon fan tokens
                         </p>
                     </div>
                     <div ref={titleRef} className="my-9 text-white">
-                        <h1 className="uppercase text-40px leading-normal font-secondary">
+                        <h1 className="uppercase text-xl md:text-40px leading-normal font-secondary">
                             Launchpad for<br/> Entertainment<br/> and Sports  
                             <span className="relative">
                                 <span className="relative z-10"> Icons</span>
-                                <span className="absolute z-0 left-2 -top-3">
+                                <span className="absolute z-0 left-2 -top-1 md:-top-3">
                                     <Image src={Vector} alt="Icons" />
                                 </span>
                             </span>
                         </h1>
                     </div>
                     <div ref={subtitRef} className="">
-                        <p className="pb-10 text-white text-xl font-light">
+                        <p className="pb-10 text-white text-sm md:text-xl font-light">
                             The world first platform that allows you to go beyond 
                             loving your favorite icons. Trade them, mint them, build
                              wealth and better connections.
                         </p>
                     </div>
-                    <div className="flex text-white">
-                        <div ref={telRef} className="w-18 h-18 rounded-full p-2 mr-3 bg-cyan text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
+                    <div className="flex text-white pb-5 md:pb-0">
+                        <div ref={telRef} className="w-10 h-10 md:w-18 md:h-18 rounded-full p-2 mr-3 bg-cyan text-base md:text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
                             <FaTelegramPlane />
                         </div>
-                        <div ref={twitRef} className="w-18 h-18 rounded-full p-2 mr-3 bg-cyan text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
+                        <div ref={twitRef} className="w-10 h-10 md:w-18 md:h-18 rounded-full p-2 mr-3 bg-cyan text-base md:text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
                             <FaTwitter />
                         </div>
-                        <div ref={instaRef} className="w-18 h-18 rounded-full p-2 mr-3 bg-cyan text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
+                        <div ref={instaRef} className="w-10 h-10 md:w-18 md:h-18 rounded-full p-2 mr-3 bg-cyan text-base md:text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
                             <FaInstagram />
                         </div>
                     </div>
                 </div>
-                <div className="relative w-1/2 flex justify-center items-center">
+                <div className="relative w-full md:w-1/2 flex justify-center items-center">
                     <Image src={heroImage} alt="Hero Image" />
                     <div ref={cardRef} className="absolute bottom-4 right-0">
                         <HeroCard />

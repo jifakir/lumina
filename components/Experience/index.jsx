@@ -95,14 +95,14 @@ const Experience = () => {
 
     return (
         <div className="container mx-auto bg-secondary">
-            <div className="w-full p-28 relative">
+            <div className="w-full px-3 py-16 md:p-28 relative">
                 <div className="absolute right-5 top-5">
                     <Image className="w-full" src={curexp} alt="Back Shape" />
                 </div>
-                <p ref={brinRef} className="uppercase text-lightpeach border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
+                <p ref={brinRef} className="uppercase text-lightpeach text-sm md:text-base border border-dashed tracking-widest border-lightpeach px-2 py-1 inline-block">
                     bringing a new experience to fan-icon experience
                 </p>
-                <ul className="flex text-5xl text-white my-10 font-bold select-none">
+                <ul className="flex text-2xl md:text-5xl text-white my-5 md:my-10 font-bold select-none">
                     <li ref={fansRef} onClick={() => setActive('fans')} className="relative cursor-pointer mr-9">
                         <h1 className={`text-white ${active !== 'fans' ? 'text-opacity-20' : ''}`}>Fans</h1>
                         <span className={`absolute -bottom-2 w-0 h-1 bg-gradient-to-r from-blue to-lightgreen ${active === 'fans' ? 'inline-block min-w-full' : 'hidden'}`}></span>
@@ -112,7 +112,7 @@ const Experience = () => {
                         <span className={`absolute -bottom-2 min-w-full h-1 bg-gradient-to-r from-blue to-lightgreen ${active === 'icons' ? 'inline-block' : 'hidden'}`}></span>
                     </li>
                 </ul>
-                <p ref={descRef} className={`text-white font-normal h-32 text-opacity-70 text-xl ${active === 'fans' ? 'block': 'hidden'}`}>
+                <p ref={descRef} className={`text-white font-light md:font-normal h-32 text-opacity-70 text-xs md:text-xl ${active === 'fans' ? 'block': 'hidden'}`}>
                     Our Fans revolutionary social app fosters unparalleled experience for the true fans. 
                     They can have robust experiences with their icons in ways they could not do before now. 
                     They are no longer just transactional parties. They are more involved than ever before. 
@@ -120,7 +120,7 @@ const Experience = () => {
                     play games, enter into draws, audition for future icon projects and view games from VIP stands. 
                     They can earn free tokens on the app through solving puzzles by set by their loved icons.
                 </p>
-                <p ref={descRef2} className={`text-white font-normal h-32 text-opacity-70 text-xl ${active === 'icons' ? 'block': 'hidden'}`}>
+                <p ref={descRef2} className={`text-white font-light md:font-normal h-32 text-opacity-70 text-xs md:text-xl ${active === 'icons' ? 'block': 'hidden'}`}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a type 
@@ -128,17 +128,17 @@ const Experience = () => {
                     when an unknown printer took a galley of type and scrambled it to make a type 
                     specimen book.    
                 </p>
-                <div className="grid grid-cols-2 gap-10 mt-14">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-14">
                     {
                         expItems.map((item, idx) => <ExpCard key={idx} itemIdx={idx} items={item} />)
                     }
                 </div>
-                <div className="relative w-full flex text-white z-10 mt-36">
-                    <div className="w-1/3 ">
+                <div className="relative w-full md:flex text-white z-10 mt-10 md:mt-36">
+                    <div className="w-full md:w-1/3 ">
                         <h1 ref={expRef} className="text-56px -ml-1 -mb-8 pt-0 mt-0 font-light">Experience</h1>
                         <div ref={logoRef} className=" w-80 h-28"><Image width={250} height={100} layout="intrinsic" src={logo} alt="Logo" /></div>
                     </div>
-                    <div ref={logorightRef} className="text-white w-2/3 text-xl font-normal text-opacity-60">
+                    <div ref={logorightRef} className="text-white w-full md:w-2/3 text-sm md:text-xl font-normal text-opacity-60">
                         <p className="">
                             The Lumina Token LUMIN is a store of great value and is a passport to a world of unparalleled experience for any icon listing their IFTs on the platform and their fans. For the holders of the IFTs, as it increases in value, it becomes very rewarding along with the utility derived from its use on the app as an exchange for their icon IFTs. 
                         </p>

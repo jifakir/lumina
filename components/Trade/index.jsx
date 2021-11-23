@@ -6,11 +6,11 @@ import RightSec from './RightSec';
 const Trade = () => {
 
     return (
-        <div className="container mt-24 pb-16 mx-auto relative">
+        <div className="container mt-16 md:mt-24 pb-16 px-3 md:px-0 mx-auto relative">
             <div className="absolute right-0 bottom-0 -mb-1">
                 <Image src={wave} alt="Wave" />
             </div>
-            <div className="flex pb-28">
+            <div className="md:flex pb-28">
                 <LeftSec />
                 <RightSec />
             </div>

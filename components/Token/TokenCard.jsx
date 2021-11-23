@@ -21,12 +21,12 @@ const TokenCard = ({data, index}) => {
     return (
         <div ref={tileRef} className={`p-11 flex flex-col justify-between ${bg}`}>
             <div className="">
-                <h1 className="text-40px font-bold">
+                <h1 className="text-3xl md:text-40px font-bold">
                     {title}
                 </h1>
             </div>
-            <div className="flex justify-between items-baseline">
-                <h6 className="">{sub}</h6>
+            <div className="flex justify-between items-baseline pt-5 md:pt-0">
+                <h6 className="pr-2 text-sm md:text-base">{sub}</h6>
                 <Image src={line} alt="Line" />
             </div>
         </div>
