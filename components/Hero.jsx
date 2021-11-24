@@ -4,10 +4,12 @@ import { FaTelegramPlane, FaTwitter, FaInstagram } from 'react-icons/fa';
 import heroImage from '../assets/HeroImage.svg';
 import Vector from '../assets/Vector.svg';
 import HeroCard from './HeroCard';
+import logo1 from '../assets/logo1.svg';
 
 // Animation
 import gsap from 'gsap';
 import { useEffect } from 'react';
+import InitModal from './Modal/Modal';
 
 const Hero = () => {
     
@@ -29,7 +31,10 @@ const Hero = () => {
     });
     return (
         <div className="container mx-auto">
-            <div className="flex flex-col-reverse md:flex-row md:py-20 md:pl-10 px-3">
+            <div className="relative z-10 flex flex-col-reverse md:flex-row md:py-20 md:pl-10 px-3">
+                <div className="absolute left-10 bottom-60  z-0">
+                    <Image width={800} height={150} src={logo1} alt="Logo" />
+                </div>
                 <div className="w-full md:w-1/2">
                     <div className="">
                         <p className="uppercase text-xs md:text-base tracking-widest font-semibold text-lightpeach border border-dashed border-lightpeach px-2 py-1 inline-block">
@@ -66,12 +71,13 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-full md:w-1/2 flex justify-center items-center">
+                <div className="relative w-full md:w-1/2 flex flex-col justify-center items-center pb-10">
                     <Image src={heroImage} alt="Hero Image" />
-                    <div ref={cardRef} className="absolute bottom-4 right-0">
+                    <div ref={cardRef} className="md:absolute bottom-4 right-0 -mt-20">
                         <HeroCard />
                     </div>
                 </div>
+                <InitModal />
             </div>
         </div>
     )

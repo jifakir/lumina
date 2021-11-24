@@ -43,7 +43,9 @@ module.exports = {
         '13': '53px',
         '18': '4.688rem',
         '90': '360px',
-        '110': '28rem'
+        '88': '350px',
+        '104': '26rem',
+        '110': '28rem',
       },
       boxShadow: {
         high: '50px 50px 38px 14px rgba(0,0,0,0.2)'
@@ -51,7 +53,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      padding: ['first']
+    },
   },
   plugins: [],
 }

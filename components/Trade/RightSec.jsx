@@ -84,9 +84,9 @@ const RightSec = (props) => {
     },[]);
 
     return (
-                <div className="w-1/2 flex justify-center items-center">
+                <div className="w-full md:w-1/2 flex justify-center items-center mt-10 sm:mt-0">
                     <div className="relative">
-                        <div ref={backRef} className="clip-path w-96 h-110 bg-lightblue"></div>
+                        <div ref={backRef} className="clip-path w-88 sm:w-96 h-104 sm:h-110 bg-lightblue"></div>
                            
                             {
                                 profileData.map((item, idx) => (

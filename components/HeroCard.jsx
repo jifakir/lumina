@@ -51,11 +51,11 @@ const HeroCard = () => {
 
     });
     return (
-        <div className="w-60 backdrop-filter backdrop-blur-md border border-blue" style={{background: '#3A61F055'}}>
+        <div className="w-72 md:w-60 backdrop-filter backdrop-blur-md border border-blue" style={{background: '#3A61F055'}}>
             <ul className="px-5 py-4 text-white">
                 {
                     profileData.map((prf, idx) => (
-                        <li ref={ref => itemsRef.current[idx] = ref} key={idx} className="flex justify-between items-center mb-4 text-sm">
+                        <li ref={ref => itemsRef.current[idx] = ref} key={idx} className="w-full flex justify-between items-center mb-4 text-sm">
                             <div className="flex items-center font-light">
                                 <div className="w-6 h-6 mr-2 clip-path-hexagon overflow-hidden bg-lightpeach flex justify-center items-center">
                                     <Image className="min-w-full h-full" src={prf.profile} alt="Profile" />

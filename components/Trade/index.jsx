@@ -10,7 +10,7 @@ const Trade = () => {
             <div className="absolute right-0 bottom-0 -mb-1">
                 <Image src={wave} alt="Wave" />
             </div>
-            <div className="md:flex pb-28">
+            <div className="md:flex md:pb-28">
                 <LeftSec />
                 <RightSec />
             </div>
