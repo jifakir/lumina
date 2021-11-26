@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Image from 'next/image';
-import profile from '../assets/profile.png';
+import profile from '../../assets/profile.png';
 import gsap from 'gsap';
 
 // importing profile pic
 
-import ronaldo from '../assets/profile/ronaldo.png';
-import wizkid from '../assets/profile/wizkid.png';
-import anthony from '../assets/profile/anthony.png';
-import bunro from '../assets/profile/bunro.png';
-import israel from '../assets/profile/israel.png';
+import ronaldo from '../../assets/profile/ronaldo.png';
+import wizkid from '../../assets/profile/wizkid.png';
+import anthony from '../../assets/profile/anthony.png';
+import bunro from '../../assets/profile/bunro.png';
+import israel from '../../assets/profile/israel.png';
 
 // Defining profile data
 const profileData = [

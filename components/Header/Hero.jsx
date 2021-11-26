@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { FaTelegramPlane, FaTwitter, FaInstagram } from 'react-icons/fa';
-import heroImage from '../assets/HeroImage.svg';
-import Vector from '../assets/Vector.svg';
+import heroImage from '../../assets/HeroImage.svg';
+import Vector from '../../assets/Vector.svg';
 import HeroCard from './HeroCard';
-import logo1 from '../assets/logo1.svg';
+import logo1 from '../../assets/logo1.svg';
 
 // Animation
 import gsap from 'gsap';
 import { useEffect } from 'react';
-import InitModal from './Modal/Modal';
+import InitModal from '../Modal/Modal';
 
 const Hero = () => {
     
@@ -32,9 +32,7 @@ const Hero = () => {
     return (
         <div className="container mx-auto">
             <div className="relative z-10 flex flex-col-reverse md:flex-row md:py-20 md:pl-10 px-3">
-                <div className="absolute left-10 bottom-60  z-0">
-                    <Image width={800} height={150} src={logo1} alt="Logo" />
-                </div>
+                
                 <div className="w-full md:w-1/2">
                     <div className="">
                         <p className="uppercase text-xs md:text-base tracking-widest font-semibold text-lightpeach border border-dashed border-lightpeach px-2 py-1 inline-block">
@@ -61,7 +59,7 @@ const Hero = () => {
                     </div>
                     <div className="flex text-white pb-5 md:pb-0">
                         <div ref={telRef} className="w-10 h-10 md:w-18 md:h-18 rounded-full p-2 mr-3 bg-cyan text-base md:text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
-                            <FaTelegramPlane />
+                            <a href="https://t.me/+JhdsbU8LGQBlNTYx" rel="noreferrer" target="_blank"><FaTelegramPlane /></a>
                         </div>
                         <div ref={twitRef} className="w-10 h-10 md:w-18 md:h-18 rounded-full p-2 mr-3 bg-cyan text-base md:text-4xl flex justify-center items-center cursor-pointer hover:bg-blue">
                             <FaTwitter />

@@ -27,7 +27,7 @@ const RightSec = (props) => {
                 inc: 5.26,
                 total: 0.02
             },
-            style: 'top-5 left-2',
+            style: 'top-5 left-1 md:left-2',
             ref: fRef
         },
         {   
@@ -39,7 +39,7 @@ const RightSec = (props) => {
                 inc: 1.40,
                 total: 321.78
             },
-            style: 'top-10 right-2',
+            style: 'top-10 right-1 md:right-2',
             ref: sRef
         },
         {   
@@ -51,7 +51,7 @@ const RightSec = (props) => {
                 inc: 10.40,
                 total: 0.5
             },
-            style: 'bottom-0 right-2',
+            style: 'bottom-0 right-1 md:right-2',
             ref: tRef
         },
         {   
@@ -63,7 +63,7 @@ const RightSec = (props) => {
                 inc: 1.40,
                 total: 0.11
             },
-            style: 'bottom-7 left-3',
+            style: 'bottom-7 left-1 md:left-3',
             ref: foRef
         },
     ];
@@ -86,7 +86,7 @@ const RightSec = (props) => {
     return (
                 <div className="w-full md:w-1/2 flex justify-center items-center mt-10 sm:mt-0">
                     <div className="relative">
-                        <div ref={backRef} className="clip-path w-88 sm:w-96 h-104 sm:h-110 bg-lightblue"></div>
+                        <div ref={backRef} className="clip-path w-88 sm:w-96 h-96 sm:h-110 bg-lightblue"></div>
                            
                             {
                                 profileData.map((item, idx) => (

@@ -20,25 +20,42 @@ const expItems = [
         title: 'Stake & Mint',
         description: 'The LUMINA ecosystem allows true fans to stake the LUMINA tokens in order to get Icon Fan Tokens IFT®️ as rewards. Only the fans are be privy to early price discounts before listing for their IFTs. ',
         icon: mint,
-        bg_color: 'bg-magenta'
+        bg_color: 'bg-magenta',
+        modal_data: [
+            'Fans of icons within the LUMINA ecosystem who hold the LUMINA tokens (LUMIN) after staking their tokens can participate in draws that grant them access to the biggest gigs in town which  LUMINA organises and brings together all the great icons together annually.',
+            'The LUMINA ecosystem allows true fans to stake the LUMINA tokens in order to get Icon Fan Tokens IFT®️ as rewards. Only the fans are privy to early price discounts before listing for their IFTs. Mint IFTs as you wish.'
+        ]
     },
     {
         title: 'NFT',
         description: 'Icon create invaluable NFTs, like early music releases, or the first scripts of a performance and other similar exciting contents for their fans and their fans alone. These NFTs can be obtained by fans on the social app.',
         icon: nft,
-        bg_color: 'bg-skyblue'
+        bg_color: 'bg-skyblue',
+        modal_data: [
+            'Icons and fans enjoy the most unique engagements and relationships with NFTs discount sales and give aways. Icons more than ever before can create invaluable NFTs, like early music releases, or the first scripts of a performance and other similar exciting contents for their fans and their fans alone. This is one of the exceptional experiences the LUMINA ecosystem delivers for both the fans and icons. These NFTs can be obtained by fans on the social app LUM.'
+        ]
     },
     {
-        title: 'Lumina Metaverse',
-        description: 'Stake the LUMINA tokens in order to get Icon Fan Tokens IFT®️ as rewards. Participate in IDOs, voting, and early price discounts for all new projects',
+        title: 'Metaverse',
+        description: 'The Metaverse is the next generation of the internet. Take a stroll with your favorite artistes in the Metaverse,  a place to earn, relax, learn, and have fun.',
         icon: metaverse,
-        bg_color: 'bg-lightcyan'
+        bg_color: 'bg-lightcyan',
+        modal_data: [
+            'LUMINA is the first of its kind digital currency for global entertainment and sports platforms. ',
+            'Metaverse is a combination of multiple elements of technology, including virtual reality, augmented reality and video where users "live" within a digital universe.',
+            'Our App allows you to live in the same space with your favorite icon, build together, have fun together, and build wealth together. Your imagination is your limit.',
+        ]
     },
     {
         title: 'Ticketing & More',
         description: 'Fans that hold their icon tokens may just be on their way to the front row of the next concert or the VIP box for the next grand slam finals by their favourite sport icons',
         icon: ticketing,
-        bg_color: 'bg-red'
+        bg_color: 'bg-red',
+        modal_data: [
+            'Fans can access early bird and premium tickets at a discount for their icons performances or shows. LUMINA tokens  makes this possible from the comfort of their homes and phones.',
+            'Icons may just want to choose a costume for a video shoot or a show; Popular shows producers may want to get fan views on content of a coming episode or a fan to direct the next blockbuster episode; Icons may want to choose from submitted auditions to select for their next collaborations; For the first time, true fans have a say on these very important topics. ',
+            'Fans that hold their icon tokens may just be on their way to the front row of the next concert or the VIP box for the next grand slam finals by their favourite sport icons. LUMINA makes this happen in ways that nobody else does.'
+        ]
     },
 ];
 
@@ -94,7 +111,7 @@ const Experience = () => {
     },[])
 
     return (
-        <div className="container mx-auto bg-secondary">
+        <div id="token" className="container mx-auto bg-secondary">
             <div className="w-full px-3 py-16 md:p-28 relative">
                 <div className="absolute right-5 top-5">
                     <Image className="w-full" src={curexp} alt="Back Shape" />
@@ -121,12 +138,13 @@ const Experience = () => {
                     They can earn free tokens on the app through solving puzzles by set by their loved icons.
                 </p>
                 <p ref={descRef2} className={`text-white font-light md:font-normal h-32 text-opacity-70 text-xs md:text-xl ${active === 'icons' ? 'block': 'hidden'}`}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book.    
+                    Sports and entertainment icons can interact with not only followers, 
+                    but true fans more than ever before through the LUM app. 
+                    They can set up competitions for auditions; call for votes 
+                    and understand what their fans really want in true details; 
+                    they can sell and reward their true fans with very rare NFTs 
+                    and most importantly, have a robust relationship with their 
+                    true fans who hold their Icon Fan Token IFT®️    
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-14">
                     {
