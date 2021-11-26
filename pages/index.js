@@ -3,7 +3,7 @@ import Image from 'next/image'
 import logo from '../assets/logo.svg';
 import Experience from '../components/Experience';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+import Hero from '../components/Header/Hero';
 import HowItWorks from '../components/HowItWorks';
 import Roadmap from '../components/Roadmap';
 import Trade from '../components/Trade';

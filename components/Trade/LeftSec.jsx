@@ -47,7 +47,7 @@ const LeftSec = () => {
                         Mint Them.<br/>
                         Build Wealth.
                     </h1>
-                    <p ref={capitRef} className="text-white text-sm md:text-xs text-opacity-70 mt-3 md:mt-10">
+                    <p ref={capitRef} className="text-white text-sm md:text-base text-opacity-70 mt-3 md:mt-10">
                         Capitalize on trends and trade with confidence through our expansive Icon Fans Token listings.
                     </p>
                     <p ref={buyRef} className="text-sm md:text-xl text-darkblue mt-3">

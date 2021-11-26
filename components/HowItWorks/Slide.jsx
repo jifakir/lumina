@@ -47,20 +47,6 @@ const Slide = ({active, data}) => {
                         <Image src={mobile} alt="Mobile" />
                     </div>
                 </div>
-                <ul ref={servicesRef} className="flex flex-wrap">
-                    {
-                        ['In-App Activation', 'Exchange', 'Rewareds', 'Free Concerts','In-App Activation', 'Exchange', 'Rewareds', 'Free Concerts',].map((v, idx) => (
-                            <>
-                                <li  key={idx} className="flex items-center w-1/2 md:w-1/4 mt-5 md:mt-3 text-xs md:text-base">
-                                    <span className="pr-1 md:pr-3">
-                                        <FaCheckCircle />
-                                    </span>
-                                    <p className="text-black1">{v}</p>
-                                </li>
-                            </>
-                        ))
-                    }
-                </ul>
       </div>  
     )
 }

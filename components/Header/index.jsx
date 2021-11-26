@@ -7,7 +7,7 @@ import Drawer from './Drawer';
 
 const Header = () => {
     const [show, setShow] = React.useState();
-    const menuItems = ['Whitepaper', 'Token', 'Economy', 'Roadmap', 'Ecosystem'];
+    const menuItems = ['Whitepaper', 'Token', 'How it works', 'Roadmap', 'Ecosystem'];
 
     const drawerHandler = () => {
         setShow(!show);
@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
                 <div className="hidden md:block w-full md:w-auto overflow-x-auto pt-5 md:py-0">
                     {
-                        menuItems.map((v, idx) => <a className="text-white transition duration-500 ease-in-out font-primary px-3 first:pl-0 cursor-pointer hover:text-blue hover:font-semibold" key={idx}>{v}</a>)
+                        menuItems.map((v, idx) => <a href={`#${v.split(' ').join('').toLowerCase()}`} className="text-white transition duration-500 ease-in-out font-primary px-3 first:pl-0 cursor-pointer hover:text-blue hover:font-semibold" key={idx}>{v}</a>)
                     }
                 </div>
                 <div className="px-3 bg-secondary md:bg-transparent py-2 shadow-md md:shadow-none w-full md:w-auto flex justify-between items-center">
