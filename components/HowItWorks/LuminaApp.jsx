@@ -44,7 +44,7 @@ const LuminaApp = () => {
             </p>
             <h3 ref={secondRef} className="text-xl font-semibold pt-3">Activities that happen on the app:</h3>
             <div className="flex justify-between pt-5">
-                <ul className="text-xl pb-5 leading-8">
+                <ul className="text-xl pb-5 leading-8"> 
                     <li ref={fifthRef}  className="">– Rewards</li>
                     <li ref={sixthRef} className="">– Voting</li>
                     <li ref={seventhRef} className="">– Minting</li>
