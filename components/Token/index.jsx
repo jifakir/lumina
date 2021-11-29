@@ -26,7 +26,19 @@ const tileData = [
         sub: 'TBA $LUMIN',
         bg: 'bg-lightcyan'
     },
-]
+];
+
+const tokenomicsData = [
+    {title: 'Private Sale', percent: 20},
+    {title: 'Ecosystem', percent: 8},
+    {title: 'Reserve', percent: 5},
+    {title: 'Public Sale', percent: 14},
+    {title: 'Liquidity', percent: 15},
+    {title: 'Team', percent: 15},
+    {title: 'Airdrop Sale', percent: 1},
+    {title: 'Staking/Reward', percent: 15},
+    {title: 'Advisors', percent: 7},
+];
 
 // ! Component start
 
@@ -59,12 +71,12 @@ const Token = () => {
                             Tokenomics
                         </h1>
                         <div className="md:flex flex-col md:flex-row justify-between">
-                            <ul className="w-full md:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <ul className="w-full md:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-5">
                                 {
-                                    Array(9).fill('').map((v, idx) => (
+                                    tokenomicsData.map((v, idx) => (
                                         <li key={idx} className="flex justify-between">
-                                            <p className="font-medium">Private Sale</p>
-                                            <span className="font-semibold">20%</span>
+                                            <p className="font-medium">{v.title}</p>
+                                            <span className="font-semibold">{v.percent}%</span>
                                         </li>
                                     ))
                                 }
